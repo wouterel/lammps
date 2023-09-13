@@ -3677,6 +3677,12 @@ void FixBondReact::update_everything()
     atom->map_init();
     atom->map_set();
   }
+
+  // Log timestep to file. code to be improved using keyword for filename.
+  FILE *file_timesteps;
+  file_timesteps = fopen("timestep.txt", "a");
+  fprintf(file_timesteps, "%d\n", update->ntimestep);
+  fclose(file_timesteps);
 }
 
 /* ----------------------------------------------------------------------
