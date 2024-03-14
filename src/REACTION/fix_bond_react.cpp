@@ -3681,7 +3681,7 @@ void FixBondReact::update_everything()
   // Log timestep to file. code to be improved using keyword for filename.
   FILE *file_timesteps;
   file_timesteps = fopen("timestep.txt", "a");
-  fprintf(file_timesteps, "%d\n", update->ntimestep);
+  fprintf(file_timesteps, "%ld\n", update->ntimestep);
   fclose(file_timesteps);
 }
 
